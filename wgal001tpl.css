@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: url('/sistema/templates/imgs/galinho/galinholog.png') no-repeat;
+    background-size: 100%;
+    font-family: "Comic Relief", system-ui;
+    background-attachment: fixed;
+    overflow-y: auto;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#menu{
+    background-color: rgba(0, 0, 0, 0.485);
+    height: 655px;
+    width: 100%;
+}
+
+/* ? MENU ? */
+#inicio{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+    vertical-align: center;
+}
+
+.logo{
+    align-self: center;
+    align-content: center;
+    border-radius: 10px;
+    position: relative;
+    bottom: 100px;
+}
+
+.botao{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 5px;
+    color: green;
+    margin: 15px;
+    position: relative;
+    bottom: 40px;
+    animation: pisca 100ms ease-in-out infinite alternate;
+}
+
+@keyframes pisca{
+    from {
+      transform: scale(1); 
+      background-color: aliceblue; 
+    }
+    to {
+      transform: scale(1.2);
+      background-color: rgb(78, 242, 75);
+    }
+}
+
+.titulo{
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    height: 200px;
+    bottom: 100px;
+}
+
+/* ? RODAPE ? */
+footer{
+    height: 30px;
+    width: 100%;
+    background-color: rgb(17, 94, 50);
+    color: white;
+    position: fixed;
+    display: flex;
+    align-items: center; 
+    bottom: 0;
+    vertical-align: middle;
+}
+
+.txt-rodape{
+    margin: 0 20px;
+}
+.ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: girar 10s linear infinite;
+}
+
+@keyframes girar {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* ? JOGO ? */
+#jogo{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#fundo{
+    align-self: center;
+    background: linear-gradient(180deg, #1f8f2c, #0e3f14);
+    width: 65%;
+    height: 450px;
+    gap: 25px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    border: 8px solid #ffd700;
+    border-radius: 25px;
+    box-shadow:
+        0 0 30px rgba(0,255,0,0.4),
+        inset 0 0 30px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+.aposta{
+    height: 100%;
+    width: 33.3333%;
+    position: relative;
+    overflow: hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-right: 4px solid rgba(255,215,0,0.7);
+}
+
+.botaogirar{
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 5px;
+    color: white;
+    top: 20px;
+    position: relative;
+    animation: pisca2 150ms ease-in-out infinite alternate;
+}
+
+@keyframes pisca2{
+    from {
+      transform: scale(1); 
+      background-color: rgb(246, 221, 38); 
+    }
+    to {
+      transform: scale(1.3);
+      background-color: rgb(223, 92, 11);
+    }
+}
+
+.botaovolta{
+    color: red;
+    align-self:flex-start;
+    margin-left: 5px;
+    position: fixed;
+    top: 5px;
+    border-radius: 5px;
+}
+
+
+#apostando{
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    gap: 20px;               
+    width: 100%;
+}
+
+#controle-aposta{ 
+    gap:15px; 
+    flex-direction: column;
+    margin-right: 20px;
+} 
+
+#ad{
+    margin-left: 20px;
+}
+
+.lados{
+    display:flex; 
+    align-items:center;
+    background: #0e3f14; 
+    padding:10px 20px; 
+    border-radius:15px; 
+    user-select: none;
+    border:3px solid gold; 
+    box-shadow: 0 0 15px rgba(0,255,0,0.4); 
+    width: 10%;
+    height: 450px;
+}
+#bt-dobrar-aposta{
+    background-color: red;
+    padding: 5px;
+    border:none; 
+    border-radius:10px; 
+    cursor:pointer; 
+    font-weight:bold; 
+}
+
+#din-apostado, #saldo {
+    text-align: center;
+    color: white;
+}
+
+/* ? POPUP ? */
+.popup{ /* esse eh de popup geral (de erro, pra apostar...) */
+    display: none;
+    position: fixed;
+    align-self: center;
+    padding: 5px;
+    height: 30%;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#popup_ganhou{
+    color: white;
+    background-color: #0e3f14;
+    padding: 10px; 
+    gap: 10px;  
+}
+
+#popup_erro, #popup_perdeu{
+    color: red;
+    background-color: #0e3f14;
+    padding: 10px; 
+    gap: 10px;  
+}
+/* ! nao fica dentro da div */
+#apostar-dinheiro{
+    height: 55%;
+    width: 45%;
+    /* align-content: center; */
+    background-color: #1f8f2c;
+    border-radius: 15px;
+    border: 6px double yellow;
+}
+
+.qrcodes{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    /* justify-self: center; */
+    /* background-color: aqua; */
+}
+
+.pix-img{
+    width: 160px;
+    height: 160px;
+}
+
+#bt-ok{
+    background-color: #0e3f14;
+    border: 2px solid #ffd700;
+    /* border: none; */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#quantia-apostar{
+    border: 5px solid #ffd700;
+}
+
+.span-popup{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    /* outline: 5px double yellow; */
+    text-decoration: 5px double yellow;
+}
+
+.divqtd-popup{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/**************************************/
+
+/* ? GIRA JACKPOT ? */
+
+#aposta1 img , 
+#aposta2 img , 
+#aposta3 img {
+    position: relative; 
+    left: 40px; 
+    top: 60px; 
+    width: 18rem; 
+    height: 18rem; 
+    user-select: none;
+}

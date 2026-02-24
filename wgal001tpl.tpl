@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BEGIN BLOCK_CACHE -->
+    <link rel="stylesheet" href="/sistema/templates/wgal001tpl.css?vcache=[cache]">
+    <!-- END BLOCK_CACHE -->
+    <title>Galinho</title>
+</head>
+<body>
+    <div id="menu">
+        <div id="inicio">
+            <img src="/sistema/templates/imgs/galinho/titulogalinh.png" height="200px"  class="titulo">
+            <img src="/sistema/templates/imgs/galinho/galinholog.png" height="200px" class="logo">
+
+            <a href="#" class="botao" onclick="jogar()">
+                <span>Clique para ficar RICO!!!!</span>
+            </a>
+
+        </div>
+    </div>
+    <div id="jogo">
+
+        <a href="#" onclick="voltar()" class="botaovolta">
+            <span>X</span>
+        </a>
+
+        <div id="apostando">
+            <div id="ad" class="lados"></div>  
+        
+            <div id="fundo">
+                <div id="aposta1">
+                    <div class="rolo"></div>
+                </div>
+                
+                <div id="aposta2">
+                    <div class="rolo"></div>
+                </div>
+                
+                <div id="aposta3">
+                    <div class="rolo"></div>
+                </div>
+            </div>        
+    
+            <div id="controle-aposta" class="lados">
+                <h2 style="color: aliceblue;">CONTA</h2>
+                <span id="saldo"></span>
+                <span id="din-apostado"></span>
+                
+                <button id="bt-dobrar-aposta" onclick="fdobrar_aposta()">Dobrar aposta</button>
+                <button id="bt-apostar" onclick="fapostar()">Apostar</button>
+            </div>  
+        </div>
+        
+
+        
+        <a href="#" onclick="girar()" class="botaogirar">
+                <span>GIRAR</span>
+        </a>
+                
+    </div>
+
+    <div class="popup" id="apostar-dinheiro">
+        <a href="#" onclick="fechapopup()" class="botaovolta">
+            <span>X</span>
+        </a>
+
+        <span class="span-popup">Faca um pix para um dos QRCodes abaixo e comece a jogar!</span>
+        <span>Aposta mínima: R$10,00</span>
+        <div class="qrcodes">
+            <img src="/sistema/templates/imgs/galinho/pixrafa.jpeg" class="pix-img">
+            <img src="/sistema/templates/imgs/galinho/pixisa.jpg" class="pix-img">
+            <img src="/sistema/templates/imgs/galinho/pixgabieplaceholder.png" class="pix-img">
+        </div>
+
+        <div class="divqtd-popup">
+            <span> Quantia a apostar: </span> <input type="number" min="0" step="0.01" name="quantia-apostar" id="quantia-apostar">
+        </div>
+        
+        <button id="bt-ok" onclick="fapostarok()">OK</button>
+    </div>
+
+    <div class="popup" id="popup_erro">
+        <a href="#" onclick="fechapopup()" class="botaovolta">
+            <span>X</span>
+        </a>
+        <p id="mensagem-erro"></p>
+    </div>
+
+    <div class="popup" id="popup_perdeu">
+        <span>PERDEU 60% KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK KKKKKKKKKKKKKKKKKKKKKKK KKKKKKKKKKKKKKKKK KKKKKKKKKKKKK KKKKKKKKKKKKKKKKKKKKKKK KKKKKKKKKKKKKK KKKKKKKKKKKKKKKKKK KKKKKKKKKKKKKKKKKKKKK</span>
+    </div>
+
+    <div class="popup" id="popup_ganhou">
+        <span>aff ganhou parabens acho</span>
+        <span>se foi galinho: 3x</span>
+        <span>se nao foi: 1.5x</span>
+    </div>
+    <footer>
+        <div class="ticker">
+            <div class="ticker-content">
+                <a href="#" onclick="jogar()">
+                    <span class="txt-rodape">Clique, aposte e deixe o <b>Galinho</b> botar ouro pra você!</span>
+                </a>
+                <b>--</b>
+                <span class="txt-rodape"> Desenvolvedoras:
+                    <a href="https://github.com/rawfaela" target="_blank"><b>Rafaela</b></a>
+                    e 
+                    <a href="https://github.com/isabelimachado" target="_blank"><b>Isabeli</b></a>
+                    e
+                    <a href="https://github.com/gabrieliromagnarita" target="_blank"><b>Gabrieli</b></a>
+                </span>
+                <b>--</b>
+                <a href="/webpro/weball/wfaz001init">
+                    <span class="txt-rodape">Construa o maior imperio agricola da internet no <b>Fazenda Clicker</b>!</span>
+                </a>
+                <b>--</b>
+                <span class="txt-rodape">98% das galinhas recomendam ESTE JOGO</span>
+                <b>--</b>
+                <span class="txt-rodape">Galinho treinado na NASA para botar OURO 24K</span>
+                <b>--</b>
+                <a href="#" onclick="jogar()">
+                    <span class="txt-rodape">Clique, aposte e deixe o <b>Galinho</b> botar ouro pra voce!</span>
+                </a>
+                <b>--</b>
+                <span class="txt-rodape"> Desenvolvedoras:
+                    <a href="https://github.com/rawfaela" target="_blank"><b>Rafaela</b></a>
+                    e 
+                    <a href="https://github.com/isabelimachado" target="_blank"><b>Isabeli</b></a>
+                    e
+                    <a href="https://github.com/gabrieliromagnarita" target="_blank"><b>Gabrieli</b></a>
+                </span>
+                <b>--</b>
+                <a href="/webpro/weball/wfaz001init">
+                    <span class="txt-rodape">Construa o maior imperio agricola da internet no <b>Fazenda Clicker</b>!</span>
+                </a>
+                <b>--</b>
+                <span class="txt-rodape">98% das galinhas recomendam ESTE JOGO</span>
+                <b>--</b>
+                <span class="txt-rodape">Galinho treinado na NASA para botar OURO 24K</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/sistema/templates/wgal001tpl.js?data=[data]"></script>
+</body>
+</html>
