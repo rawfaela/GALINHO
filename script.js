@@ -123,7 +123,7 @@ function girar(){
        }, 2000);
     }
     else {
-        mensagem_erro.textContent = "pobre sem dinheiro kkk <br> mínimo pra apostar: R$10";
+        mensagem_erro.innerHTML = "pobre sem dinheiro kkk <br> mínimo pra apostar: R$10";
         popup_erro.style.display = "flex";
         apostar_dinheiro.style.display = "none";
     }
