@@ -42,9 +42,9 @@ function attTela(){
 attTela();
 
 const imgs_ad = [
-    "/sistema/templates/imgs/galinho/agrosys.jpg",
-    "/sistema/templates/imgs/galinho/subwaymoney.jpeg",
-    "/sistema/templates/imgs/galinho/galinhoad.png"
+    "imgs/agrosys.jpg",
+    "imgs/subwaymoney.jpeg",
+    "imgs/galinhoad.png"
 ]
 let pos = 0;
 const imgElement = document.createElement("img");
@@ -142,7 +142,7 @@ function aleatorio(){
         "porco.png"
     ];
 
-    img.src = "/sistema/templates/imgs/galinho/" + imagens[num];
+    img.src = "imgs/" + imagens[num];
     img.dataset.tipo = imagens[num]; 
     return img;
 };
