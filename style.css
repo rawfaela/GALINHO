@@ -212,8 +212,17 @@ footer{
 } 
 
 #ad{
-    margin-left: 20px;
     justify-content: center;
+    position: relative;
+    display:flex; 
+    flex-direction: column;
+    align-items:center;
+    height: 100%;
+    width: 100%;
+}
+
+#adA{
+    margin-left: 20px;
 }
 
 .lados{
@@ -352,6 +361,11 @@ footer{
 
 .x-ad{
     color: red;
-    position:absolute;
-    top: 70px;
+    position: absolute;
+    top: 5px;
+}
+
+.gc-ad{
+    width: 10%;
+    height: 450px;
 }
