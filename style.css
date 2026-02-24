@@ -180,6 +180,13 @@ footer{
     border-radius: 5px;
 }
 
+#bt-volta-aposta{
+    top: 60px;
+}
+
+#bt-erro{
+    top: 57px
+}
 
 #apostando{
     display: flex;
