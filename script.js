@@ -125,6 +125,7 @@ function girar(){
     else {
         mensagem_erro.textContent = "pobre sem dinheiro kkk <br> mínimo pra apostar: R$10";
         popup_erro.style.display = "flex";
+        apostar_dinheiro.style.display = "none";
     }
 };
 
@@ -155,6 +156,7 @@ function aleatorio(){
 
 function fapostar(){
     apostar_dinheiro.style.display = "flex";
+    popup_erro.style.display = "none";
 }
 
 function fapostarok(){
@@ -180,6 +182,7 @@ function fdobrar_aposta(){
     } else {
         mensagem_erro.textContent = "Dinheiro insuficiente"
         popup_erro.style.display = "flex";
+        apostar_dinheiro.style.display = "none";
     }
 }; 
 
