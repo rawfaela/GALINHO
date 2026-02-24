@@ -42,7 +42,7 @@ function attTela(){
 attTela();
 
 const imgs_ad = [
-    "imgs/agrosys.jpg",
+    "imgs/restaurante.jpg",
     "imgs/subwaymoney.jpeg",
     "imgs/galinhoad.png"
 ]
