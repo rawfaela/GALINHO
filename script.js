@@ -130,10 +130,16 @@ function girar(){
 
 function aleatorio(){
     const img = document.createElement('img');
-    const num = Math.floor(Math.random() * 7);
+    const num = Math.floor(Math.random() * 13);
 
     const imagens = [
         "galinho.png",
+        "vaca.png",
+        "coelho.png",
+        "cavalo.png",
+        "pato.png",
+        "ovelha.png",
+        "porco.png",
         "vaca.png",
         "coelho.png",
         "cavalo.png",
