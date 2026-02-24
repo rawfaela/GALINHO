@@ -369,3 +369,114 @@ footer{
     width: 10%;
     height: 450px;
 }
+
+@media screen and (max-width: 390px) {
+
+    #fundo {
+        width: 90%;
+        height: 350px;
+        flex-direction: row;
+        border-radius: 15px;
+        border-width: 6px;
+        gap: 10px;
+    }
+
+    .aposta {
+        width: 33%;
+        height: 100%;
+        border-right-width: 3px;
+    }
+
+    #aposta1 img,
+    #aposta2 img,
+    #aposta3 img {
+        width: 12rem;
+        height: 12rem;
+        left: 10px;
+        top: 10px;
+    }
+
+    .botao {
+        font-size: 22px;
+        padding: 4px 8px;
+        bottom: 15px;
+    }
+
+    .botaogirar {
+        font-size: 24px;
+        padding: 4px;
+    }
+
+    .botaovolta {
+        font-size: 18px;
+        top: 5px;
+        left: 5px;
+    }
+
+    #inicio {
+        margin-top: 50px;
+        height: 250px;
+    }
+
+    .titulo {
+        height: 120px;
+        bottom: 50px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 150px;
+        height: auto;
+        bottom: 70px;
+    }
+
+    .lados {
+        width: 20%;
+        height: 350px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .popup {
+        width: 80%;
+        height: 35%;
+        padding: 10px;
+        margin-top: 40px;
+        font-size: 16px;
+    }
+
+    #apostar-dinheiro {
+        width: 80%;
+        height: 50%;
+    }
+
+    .pix-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #bt-ok {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #controle-aposta {
+        gap: 10px;
+        margin-right: 10px;
+    }
+
+    .gc-ad {
+        width: 15%;
+        height: 350px;
+    }
+
+    footer {
+        font-size: 12px;
+        height: 25px;
+    }
+
+    .txt-rodape {
+        margin: 0 10px;
+    }
+}
