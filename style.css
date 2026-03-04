@@ -4,7 +4,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: url('imgs/galinhologo.png') no-repeat;
+    background: url('/imgs/galinholog.png') no-repeat;
     background-size: 100%;
     font-family: "Comic Relief", system-ui;
     background-attachment: fixed;
@@ -56,6 +56,16 @@ a{
     position: relative;
     bottom: 40px;
     animation: pisca 100ms ease-in-out infinite alternate;
+}
+
+.botaoConta{
+    background-color: rgb(255, 0, 0);
+    padding: 7px;
+    font-size: 30px;
+    border-radius: 5px;
+    margin: 15px;
+    position: relative;
+    bottom: 40px;
 }
 
 @keyframes pisca{
@@ -181,7 +191,7 @@ footer{
     }
 }
 
-.botaovolta{
+.botaovolta, .botaovolta2{
     color: red;
     align-self:flex-start;
     margin-left: 5px;
@@ -189,6 +199,7 @@ footer{
     top: 5px;
     border-radius: 5px;
 }
+
 
 #bt-volta-aposta{
     top: 60px;
@@ -370,113 +381,82 @@ footer{
     height: 450px;
 }
 
-@media screen and (max-width: 390px) {
 
-    #fundo {
-        width: 90%;
-        height: 350px;
-        flex-direction: row;
-        border-radius: 15px;
-        border-width: 6px;
-        gap: 10px;
-    }
+/*? TELA DE LOGIN - REGISTRO*/
 
-    .aposta {
-        width: 33%;
-        height: 100%;
-        border-right-width: 3px;
-    }
-
-    #aposta1 img,
-    #aposta2 img,
-    #aposta3 img {
-        width: 12rem;
-        height: 12rem;
-        left: 10px;
-        top: 10px;
-    }
-
-    .botao {
-        font-size: 22px;
-        padding: 4px 8px;
-        bottom: 15px;
-    }
-
-    .botaogirar {
-        font-size: 24px;
-        padding: 4px;
-    }
-
-    .botaovolta {
-        font-size: 18px;
-        top: 5px;
-        left: 5px;
-    }
-
-    #inicio {
-        margin-top: 50px;
-        height: 250px;
-    }
-
-    .titulo {
-        height: 120px;
-        bottom: 50px;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .logo {
-        width: 150px;
-        height: auto;
-        bottom: 70px;
-    }
-
-    .lados {
-        width: 20%;
-        height: 350px;
-        padding: 8px 10px;
-        font-size: 14px;
-    }
-
-    .popup {
-        width: 80%;
-        height: 35%;
-        padding: 10px;
-        margin-top: 40px;
-        font-size: 16px;
-    }
-
-    #apostar-dinheiro {
-        width: 80%;
-        height: 50%;
-    }
-
-    .pix-img {
-        width: 120px;
-        height: 120px;
-    }
-
-    #bt-ok {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    #controle-aposta {
-        gap: 10px;
-        margin-right: 10px;
-    }
-
-    .gc-ad {
-        width: 15%;
-        height: 350px;
-    }
-
-    footer {
-        font-size: 12px;
-        height: 25px;
-    }
-
-    .txt-rodape {
-        margin: 0 10px;
-    }
+#login, #registro {
+    display: none;             
+    flex-direction: column;        
+    justify-content: center;       
+    align-items: center;  
+    padding: 5px;
+    height: 50%;
+    width: 40%;
+    gap: 10px;                    
+    background-color: #e5e5e595;  
+    position: fixed;                
+    top: 50%;                      
+    left: 50%;                      
+    border-radius: 10px;
+    transform: translate(-50%, -70%);  
+    color: rgb(3, 4, 5);
 }
+
+#login input,#registro input{
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 3px solid #114c0c;
+    width: 200px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login input:focus,#registro input{
+    outline: none;
+}
+
+#login button, 
+#registro button {
+    background-color: #186817;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 8px;
+    width: 200px;
+    font-size: 16px;
+    border: 3px solid #114c0c;
+    color: #ccffc7;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#login button:hover, 
+#registro button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#login button:active, 
+#registro button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#login a:first-child, #registro a:first-child{
+    font-size: 1.5rem;
+}
+
+#login a:last-child {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: black;
+}
+
+#login a:last-child:hover{
+    transform: scale(3);
+}
+
+
+
+
