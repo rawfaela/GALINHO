@@ -5,7 +5,7 @@ body{
     display: flex;
     flex-direction: column;
     background: url('imgs/galinhologo.png') no-repeat;
-    background-size: 100%;
+    background-size: cover;
     font-family: "Comic Relief", system-ui;
     background-attachment: fixed;
     overflow-y: auto;
