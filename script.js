@@ -227,9 +227,9 @@ function logando(){
 }
 
 const imgs_ad = [
-    "/imgs/restaurante.png",
-    "/imgs/subwaymoney.jpeg",
-    "/imgs/galinhoad.png"
+    "imgs/restaurante.png",
+    "imgs/subwaymoney.jpeg",
+    "imgs/galinhoad.png"
 ]
 
 let pos = 0;
@@ -342,7 +342,7 @@ function aleatorio(){
         "porco.png"
     ];
 
-    img.src = "/imgs/" + imagens[num];
+    img.src = "imgs/" + imagens[num];
     img.dataset.tipo = imagens[num]; 
     return img;
 };
