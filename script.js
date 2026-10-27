@@ -125,21 +125,67 @@ const DivLogin         = document.getElementById("login");
 const DivRegistro      = document.getElementById("registro");
 const popup_gratis     = document.getElementById("popup_gratis");
 
-//? LISTENER
-document.querySelector(".botao").addEventListener("click", jogar);
+
+ //? LISTENER
+
+// Jogar
+document.querySelectorAll(".botao, .btn-jogar").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        jogar();
+    });
+});
+
+// Voltar ao menu
 document.querySelectorAll(".botaovolta").forEach(btn => {
-    btn.addEventListener("click", voltar);
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        voltar();
+    });
 });
-document.querySelector(".botaoConta").addEventListener("click", abrirLogin);
-document.querySelector(".botaoReg").addEventListener("click", abrirRegistro);
-document.getElementById("bt-dobrar-aposta").addEventListener("click", fdobrar_aposta);
-document.querySelector(".botaogirar").addEventListener("click", girar);
-document.getElementById("bt-apostar").addEventListener("click", fapostar);
+
+// Abrir login e registro
+document.querySelector(".botaoConta").addEventListener("click", (e) => {
+    e.preventDefault();
+    abrirLogin();
+});
+
+document.querySelector(".botaoReg").addEventListener("click", (e) => {
+    e.preventDefault();
+    abrirRegistro();
+});
+
+// Ações de aposta
+document.getElementById("bt-dobrar-aposta")
+    .addEventListener("click", fdobrar_aposta);
+
+document.getElementById("bt-apostar")
+    .addEventListener("click", fapostar);
+
+document.getElementById("bt-ok")
+    .addEventListener("click", fapostarok);
+
+// Girar
+document.querySelector(".botaogirar").addEventListener("click", (e) => {
+    e.preventDefault();
+    girar();
+});
+
+// Fechar pop-ups
 document.querySelectorAll(".botaovolta2").forEach(btn => {
-    btn.addEventListener("click", fechapopup);
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        fechapopup();
+    });
 });
-document.getElementById("bt-ok").addEventListener("click", fapostarok);
-document.getElementById("rodada_gratis").addEventListener("click", rodadagratis)
+
+// Rodada grátis: registra o evento apenas se o botão existir
+const botaoRodadaGratis = document.getElementById("rodada_gratis");
+
+if (botaoRodadaGratis) {
+    botaoRodadaGratis.addEventListener("click", rodadagratis);
+}
+
 
 //? COISAS
 const botaogirar = document.querySelector(".botaogirar");
